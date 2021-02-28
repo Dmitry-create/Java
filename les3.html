@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script>
+
+    // 1. Простые числа
+
+    let a = 2
+    simp:
+    while (a < 100) {
+        a++
+        for (let n = 2; n < a; n++) {
+            if (a % n == 0) {
+                continue simp;
+            }
+        }
+        console.log(a);
+    }
+
+    // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно
+    // реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.Товары в корзине хранятся
+    // в массиве.Задачи:
+    // a) Организовать такой массив для хранения товаров в корзине;
+    // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+
+    let arr = [
+        ['бананы', 3, 3],
+        ['яблоки', 1, 5],
+        ['хлеб', 1, 4],
+        ['молоко', 2, 1]
+    ]
+    let sum = []
+    for (let index = 0; index < arr.length); {
+        let type = arr[index][1] * arr[index][2]
+        sum.push(type)
+    }
+    let result = sum.reduce((total, amount) => total + amount);
+    console.log('Сумма покупки ' + result + ' рублей');
+
+    //3.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. 
+
+    for (let index = 0; index < 10; index++) console.log(index); {
+    }//не уверен в правильности
+
+
+    //4. *Нарисовать пирамиду с помощью console.log
+    const el = 'x';
+    let p = el;
+    for (let index = 0; index < 20; index++) {
+        console.log(p);
+        p = p + el;
+    }
+
+</script>
