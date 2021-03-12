@@ -1,6 +1,6 @@
 
 let summBusket = {
-    itemBusket: null,
+
     arr: [
         {
             product: "молоко",
