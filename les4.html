@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script>
+    // 1. Написать функцию, преобразующую число в объект. Передавая на
+
+    let number = {}
+    function separ(user) {
+        var user = prompt('введите число')
+        if (user >= 0 && user <= 999) {
+            number.hun = parseInt(user / 100)
+            number.dec = parseInt((user - number.hun * 100) / 10)
+            number.num = user - ((number.hun * 100) + (number.dec * 10))
+            console.log(number);
+        } else {
+            return separ()
+        }
+    }
+    separ()
+
+
+    // 2.Продолжить работу с интернет-магазином:
+    // 2.1. В прошлом домашнем задании вы реализовали корзину на базе
+
+    let summBusket = {
+        arr: [
+            {
+                product: "моллоко",
+                weight: 2,
+                cost: 3,
+            },
+            {
+                product: "сметана",
+                weight: 5,
+                cost: 1,
+            }
+        ],
+
+        summ() {
+            return this.arr.reduce((total, amount) => total + amount.weight * amount.cost, 0);
+        }
+    }
+    console.log('Сумма покупки ' + summBusket.summ() + ' рублей');
+
+
+
+</script>
