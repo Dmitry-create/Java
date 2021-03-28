@@ -36,7 +36,7 @@ let catalog = {
             <div class="busket">
         <p>Наименование: ${item.product}<p>
        <p>Цена за шт: ${item.cost}</p>
-         <button data-id_product="${item.id}" >купить<button></div>`;
+         <button data-id_product="${item.id}" >купить</button></div>`;
     },
     init(catalogBlock) {
         this.summBusket = summBusket;
